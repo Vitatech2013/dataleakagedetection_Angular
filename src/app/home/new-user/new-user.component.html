@@ -1,0 +1,44 @@
+<form  [formGroup]="newUser" (ngSubmit)="submit()">
+    <div class="card">
+        <div class="header"> Register Newuser </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">First Name</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="firstname">
+              </div>
+            
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="lastname">                                
+             </div>                             
+               
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input type="text" class="form-control"  aria-describedby="emailHelp" formControlName="username">                                
+              </div>
+              
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Password</label>
+                <input type="password" class="form-control"  aria-describedby="emailHelp" formControlName="password">
+              </div>  
+             
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+                <input type="" class="form-control"  aria-describedby="emailHelp" formControlName="mobileno">
+              </div>
+              
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email Id</label>
+                <input type="email" class="form-control"  aria-describedby="emailHelp" formControlName="emailid">                                
+             </div>                             
+           
+             <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">File</label>
+              <input type="file" class="form-control" formControlName="file" (change)="selectionImage($event)">                                
+           </div> 
+
+            <div class="footer">
+              <button class="btn btn-primary" [disabled]="newUser.invalid">submit</button>
+              </div>
+    </div>
+   
+</form>

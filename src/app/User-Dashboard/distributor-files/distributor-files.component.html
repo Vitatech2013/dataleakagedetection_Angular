@@ -1,0 +1,27 @@
+<h3 style="text-align: center;padding: 10px;font-size: 25px;font-weight: bold;color: brown;">Admin Files</h3>
+<table class="table">
+   
+    <thead>
+      <tr>
+        <th>S.NO.</th>
+        <th>User Name</th>
+        <th>Subject</th>
+        <th>Date</th>
+        <th>Key</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor=" let v of adminFiles ;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{v.username}}</td>
+        <td>{{v.subject}}</td>
+        <td>{{v.date}}</td>
+        <td>{{v.key}}</td>
+        <td>
+            <button class="btn btn-secondary" >Download</button>
+        </td>
+      
+     </tr>
+    </tbody>
+  </table>

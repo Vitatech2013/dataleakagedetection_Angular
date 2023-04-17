@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>S.NO.</th>
+        <th>From </th>
+        <th>To</th>
+        <th>Subject</th>
+        <th>Date</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor=" let a of agentFiles ;let i=index">
+        <td>{{i+1}}.</td>
+        <td>{{a.from}}</td>
+        <td>{{a.username}}</td>
+        <td>{{a.subject}}</td>
+        <td>{{a.date}}</td>
+        <td>
+            <button type="submit"  class="btn btn-primary" >Download</button>
+        </td>
+      
+     </tr>
+    </tbody>
+  </table>

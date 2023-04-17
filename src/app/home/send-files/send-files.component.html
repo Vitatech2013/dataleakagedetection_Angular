@@ -1,0 +1,28 @@
+<div class="card" >
+    <form [formGroup]= "sendFile">
+        <div class="header">Send Files</div>
+            <div class="card-body">
+
+                <div class="mb-3">
+                    <label  class="form-label">Username</label>
+                    <select class="form-select" aria-label="Default select example" formControlName="username">
+                        <option *ngFor="let v of viewusers" value="{{v.username}}">{{v.username}}</option>                      
+                      </select>
+                </div>
+ 
+                <div class="mb-3">
+                        <label  class="form-label">Subject</label>
+                        <input  type="text" class="form-control"  placeholder="Username" formControlName="subject">
+                </div>
+
+                <div class="mb-3">
+                    <label  class="form-label">Username</label>
+                    <input  type="file" class="form-control"  placeholder="Username" formControlName="file">
+                </div>
+
+                 <div class="footer">
+                    <button class="btn btn-primary" (click)="submit()" [disabled]="sendFile.invalid">Send</button>
+                </div>
+            </div>   
+    </form>            
+</div>

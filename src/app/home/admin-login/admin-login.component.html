@@ -1,0 +1,27 @@
+<div class="card" >
+    <form [formGroup]= "adminlogin">
+        <div class="header">Admin Login</div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label  class="form-label">Username</label>
+                    <input [class.is-invalid]= "userName?.invalid && userName?.touched" type="text" class="form-control"  placeholder="Username" formControlName="userName">
+                    <div *ngIf= "userName?.invalid && userName?.touched">
+                        <small class="text-danger" *ngIf= "userName?.errors?.['required']">Username is required</small>                          
+                       </div>
+                   </div>
+                 
+                  <div>
+                    <label  class="form-label">Password</label>
+                    <input [class.is-invalid]= "password?.invalid && password?.touched" type="password" class="form-control"  placeholder=" Password" formControlName="password">
+                    <div *ngIf= "password?.invalid && password?.touched">
+                        <small class="text-danger" *ngIf= "password?.errors?.['required']">Password is required</small>                         
+                       </div>
+                  </div>
+
+                
+                </div>
+                 <div class="footer">
+                    <button class="btn btn-primary" (click)="submit()" [disabled]="adminlogin.invalid">Login</button>
+                </div>
+    </form>            
+</div>

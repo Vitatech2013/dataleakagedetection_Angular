@@ -1,0 +1,40 @@
+<form  [formGroup]= "profile">
+    <div class="card">
+        <div class="header"> User Profile </div>
+            
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input type="text" class="form-control"  aria-describedby="emailHelp" formControlName="username" readonly>                                
+          </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">First Name</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="firstname">
+              </div>
+            
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="lastname">                                
+             </div>                             
+           
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+                <input type="" class="form-control"  aria-describedby="emailHelp" formControlName="mobileno">
+              </div>
+              
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email Id</label>
+                <input type="email" class="form-control"  aria-describedby="emailHelp" formControlName="emailid">                                
+             </div>                             
+           
+             <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Image</label>
+              <input type="file" class="form-control" formControlName="file" >                                
+           </div> 
+
+            <div class="footer">
+              <button class="btn btn-primary" (click)="update()">Update</button>
+              </div>
+    </div>
+   
+</form>
+

@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>S.NO.</th>
+        <th>User Name</th>
+        <th>Subject</th>
+        <th>Date</th>
+        <th>Key</th>
+        <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor=" let l of leakfiles ;let i=index">
+        <td>{{i+1}}.</td>
+        <td>{{l.username}}</td>
+        <td>{{l.subject}}</td>
+        <td>{{l.date}}</td>
+        <td>{{l.key}}</td>
+        <td>
+            <button type="submit"  class="btn btn-primary" >Download</button>
+        </td>
+      
+     </tr>
+    </tbody>
+  </table>
+
+

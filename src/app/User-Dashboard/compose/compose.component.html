@@ -1,0 +1,32 @@
+<form  [formGroup]= "Compose" (ngSubmit)="sendFiles()">
+    <div class="card">
+        <div class="header"> Compose </div>
+            
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">From</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="from" readonly>                                
+          </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">To</label>
+                <select class="form-select" aria-label="Default select example" formControlName="username">
+                    <option *ngFor="let v of viewusers" value="{{v.username}}" [hidden]="v.username==username" >{{v.username}}</option>                      
+                  </select>
+              </div>
+            
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Subject</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="subject">                                
+             </div>                             
+                                                
+           
+             <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">file</label>
+              <input type="file" class="form-control" formControlName="file" >                                
+           </div> 
+
+            <div class="footer">
+              <button type="submit"  class="btn btn-primary"  [disabled]="Compose.invalid">Send files</button>
+              </div>
+    </div>
+   
+</form>
